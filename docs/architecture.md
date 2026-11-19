@@ -25,7 +25,7 @@ flowchart LR
     API["Backend API<br/>RPC proxy, indexer, anchor"]
     APM["Tenant's own APM"]
   end
-  subgraph S["Stellar Analytics, EU region"]
+  subgraph S["Stellar Analytics"]
     GW["Web ingest gateway<br/>bot filter, IP truncation,<br/>URL scrubbing, queue"]
     UM["Umami<br/>web analytics"]
     COL["SCF collector<br/>OpenTelemetry Collector<br/>drops traces and logs,<br/>normalizes routes, queue"]
@@ -127,7 +127,7 @@ All for selectable time ranges:
 - **Daily salt**: the visitor-hash salt rotates every 24 hours and never touches disk. After that, no one can link a hash to a person. Unique visitors are exact per day and approximate over longer ranges, which the RFP allows.
 - **Scrubbing**: query strings are dropped by default. Paths, referrers and event properties go through the API route rules, so wallet addresses and emails in dApp URLs are never stored.
 - **Legal basis**: legitimate interest for aggregate audience measurement, following the CNIL's consent-exemption criteria.
-- **Data residency**: EU only. AWS Frankfurt, backups in a second EU region.
+- **Data residency**: all data is stored in the EU, in AWS Frankfurt, with backups in a second EU region. The service itself is open to projects and visitors worldwide.
 - **Opt-in may still be needed** in Germany under a strict reading of TDDDG §25, and in consent-first regimes such as China (PIPL) and South Korea (PIPA). Tenants there can enable a consent mode. A privacy lawyer reviews this list in Tranche #2.
 - **Erasure**: by design almost no one can exercise it. For data a tenant sends by mistake, tenant admins erase by time range, URL pattern or event property in the portal.
 
