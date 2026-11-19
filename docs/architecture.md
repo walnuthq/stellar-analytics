@@ -128,7 +128,7 @@ All for selectable time ranges:
 - **Scrubbing**: query strings are dropped by default. Paths, referrers and event properties go through the API route rules, so wallet addresses and emails in dApp URLs are never stored.
 - **Legal basis**: legitimate interest for aggregate audience measurement, following the CNIL's consent-exemption criteria.
 - **Data residency**: all data is stored in the EU, in AWS Frankfurt, with backups in a second EU region. The service itself is open to projects and visitors worldwide.
-- **Opt-in may still be needed** in Germany under a strict reading of TDDDG §25, and in consent-first regimes such as China (PIPL) and South Korea (PIPA). Tenants there can enable a consent mode. A privacy lawyer reviews this list in Tranche #2.
+- **Opt-in may still be needed** in Germany under a strict reading of TDDDG §25, and in consent-first regimes such as China (PIPL) and South Korea (PIPA). Tenants there can enable a consent mode. The Tranche #2 privacy docs give the final list.
 - **Erasure**: by design almost no one can exercise it. For data a tenant sends by mistake, tenant admins erase by time range, URL pattern or event property in the portal.
 
 ## 8. Infrastructure, security and SLAs
